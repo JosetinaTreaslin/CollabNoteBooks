@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Learning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8;
+        }
+        .container {
+            padding: 20px;
+        }
+        header {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .quote {
+            background: #1E4DD8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            font-style: italic;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .task-widget {
+            display: flex;
+            justify-content: space-between;
+            background: #C7F2A7;
+            padding: 15px;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+        .level-indicator {
+            text-align: center;
+        }
+        .domains, .heroes {
+            margin-top: 20px;
+        }
+        .domains h3, .heroes h3 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .domain-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        .domain-list button {
+            background: #FFB6A3;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .hero-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+        .hero {
+            text-align: center;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .hero img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background: #D0EAC4;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .task-widget {
+                flex-direction: column;
+                align-items: center;
+            }
+            .domain-list {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            .hero img {
+                width: 60px;
+                height: 60px;
+            }
+            .bottom-nav {
+                flex-direction: row;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .quote {
+                font-size: 14px;
+            }
+            .task-widget {
+                padding: 10px;
+            }
+            .domain-list button {
+                padding: 8px;
+                font-size: 12px;
+            }
+            .hero img {
+                width: 50px;
+                height: 50px;
+            }
+            .bottom-nav {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Salute Jennica</h2>
+            <div class="quote">"Justice delayed is justice denied."<br> - William E. Gladstone</div>
+        </header>
+
+        <input type="text" class="search-bar" placeholder="Search">
+
+        <div class="task-widget">
+            <div class="task-info">
+                <p>Complete your daily task</p>
+                <p class="current-topic">Current topic: <strong>Medicinal malpractice law</strong></p>
+            </div>
+            <div class="level-indicator">
+                <p>Level 3</p>
+                <div class="pie-chart"></div>
+            </div>
+        </div>
+
+        <section class="domains">
+            <h3>Domains <span>View All</span></h3>
+            <div class="domain-list">
+                <button>Criminal law</button>
+                <button>Civil law</button>
+                <button>Family law</button>
+                <button>Corporate law</button>
+                <button>Administrative law</button>
+                <button>Constitutional law</button>
+            </div>
+        </section>
+
+        <section class="heroes">
+            <h3>Heros of the Law <span>View All</span></h3>
+            <div class="hero-list">
+                <div class="hero">
+                    <img src="hero1.jpg" alt="Hero">
+                    <p>Name</p>
+                    <p>Description</p>
+                </div>
+                <div class="hero">
+                    <img src="hero2.jpg" alt="Hero">
+                    <p>Name</p>
+                    <p>Description</p>
+                </div>
+                <div class="hero">
+                    <img src="hero3.jpg" alt="Hero">
+                    <p>Name</p>
+                    <p>Description</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bottom-nav">
+        <span>🏠</span>
+        <span>📚</span>
+        <span>⚖️</span>
+    </footer>
+</body>
+</html>
